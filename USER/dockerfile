@@ -4,7 +4,8 @@ CMD ["ping"]
 ENTRYPOINT ["google.com"]
 
 RUN adduser -D mkfs
-USER mkfs
+USER root
 RUN apk add --no-cache curl
+USER mkfs
 # This dictates exactly what happens when the container boots up
 ENTRYPOINT ["curl", "-s", "https://ifconfig.me"]
