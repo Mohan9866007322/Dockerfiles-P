@@ -1,5 +1,5 @@
 FROM alpine:latest
-RUN dnf install -y ping
+RUN apk install -y ping
 CMD ["ping"]
 ENTRYPOINT ["google.com"]
 
