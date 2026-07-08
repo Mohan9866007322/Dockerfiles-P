@@ -1,0 +1,10 @@
+FROM alpine:latest
+RUN dnf install -y ping
+CMD ["ping"]
+ENTRYPOINT ["google.com"]
+
+RUN useradd -m mkfs
+RUN echo "mkfs:mkfs" | chpasswd
+RUN apk add --no-cache curl
+# This dictates exactly what happens when the container boots up
+ENTRYPOINT ["curl", "-s", "https://ifconfig.me"]
