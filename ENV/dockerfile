@@ -1,5 +1,6 @@
 FROM almalinux:9
-ENV COURCE="DEVOPS" \
+ENV COURSE="DEVOPS" \
     AUTHOR="Mohan" \
     VERSION="1.0" \
     DESCRIPTION="This is a Dockerfile for DevOps environment setup."
+CMD ["sleep", "3600"]
