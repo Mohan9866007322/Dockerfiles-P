@@ -1,5 +1,5 @@
 FROM alpine:latest
-RUN apk install -y ping
+RUN apk add --no-cache ping
 CMD ["ping"]
 ENTRYPOINT ["google.com"]
 
