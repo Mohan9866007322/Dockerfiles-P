@@ -1,5 +1,5 @@
 FROM alpine:latest
-RUN apk add --no-cache ping
+RUN apk add --no-cache iputils-ping
 CMD ["ping"]
 ENTRYPOINT ["google.com"]
 
