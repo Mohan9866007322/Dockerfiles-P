@@ -1,0 +1,6 @@
+FROM alpine:latest
+RUN mkdir -p /tmp/test
+RUN cd /tmp/test && touch file1.txt file2.txt file3.txt
+RUN pwd
+RUN echo "Hello, World!" > /tmp/test/file1.txt
+CMD ["sleep", "3600"]
